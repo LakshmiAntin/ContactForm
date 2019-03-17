@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="SimpleApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <script src="SimpleApp.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="SimpleApp.css">
+  </head>
+  <body>
+    <form>
+    <div class="container" ng-controller="SimpleAppController as SimpleApp">
+      <h1 align="center"> Contact Form</h1>
+      <div class="item1">
+        <label for="name" align="right">Name:</label>
+        <input type="text"  ng-model="SimpleApp.name" name=" " placeholder="Enter your Name">
+      </div>
+      <div class="item2">
+        <label for="email" align="right">Email:</label>
+        <input type="text" ng-model="SimpleApp.email" name=" " placeholder="Enter your Email">
+      </div>
+      <div class="item3">
+        <span for="townborn">We'll never share your email with anyone else !</span>
+      </div>
+      <div class="item4">
+        <label for="phone" align="right" >Phone:</label>
+        <input type="text" ng-model="SimpleApp.phone" name=" " placeholder="Enter your Phone">
+      </div>
+      <div class="item5">
+        <label for="Url" align="right">Blog URL:</label>
+        <input type="text" ng-model = "SimpleApp.url" name=" " placeholder="Enter your URL">
+      </div>
+        <button class="btn btn-success" ng-click="SimpleApp.validate()">Verify</button>
+        <div class="message" ng-show="SimpleApp.touch">
+          <div ng-show="SimpleApp.formValid" align="center">
+          <p> Form Complete!</p>
+          </div>
+          <div ng-show="!SimpleApp.formValid" align="center">
+          <p> Form Incomplete!</p>
+          </div>
+        </div>
+    </div>
+    
+  </form>
+  </body>
+</html>
