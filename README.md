@@ -1,4 +1,4 @@
 # ContactForm
 Simple contact form
 
-Just opne Index.html on web browser
+Just open Index.html on web browser
