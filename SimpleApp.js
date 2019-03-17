@@ -11,7 +11,8 @@ angular.module('SimpleApp', [])
       var allowedName = /^[A-Za-z]*$/;
       var emailpattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       var phpattern = /^[0-9]*$/;
-      var urlpattern = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+
+      var urlpattern = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
       var regex = new RegExp(urlpattern);
       var t = SimpleApp.url;
       if(!allowedName.test(SimpleApp.name) || SimpleApp.name.length<3 || SimpleApp.name.length>30 ){
